@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dyah's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loadingScreen" aria-label="Loading animasi mawar">
+        <dotlottie-player src="https://lottie.host/eff539e9-5129-480a-8dac-6c39c9404d41/VnCcdUSz8x.lottie"
+            background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+    </div>
+    <div class="bg-cover bg-center min-h-screen text-black" style="background-image: url('image/bg.jpeg');">
+        <nav class="flex justify-center space-x-10 py-6 text-xl font-medium fixed-navbar">
+            <a href="#Home" class="text-black-700 hover:text-blue-500">Home</a>
+            <a href="#About Me" class="text-black-700 hover:text-blue-500">About Me</a>
+            <a href="#My Project" class="text-black-700 hover:text-blue-500">My Project</a>
+            <a href="#Work Experience" class="text-black-700 hover:text-blue-500">Work Experience</a>
+            <a href="#Testimonials" class="text-black-700 hover:text-blue-500">Testimonials</a>
+            <a href="#Contact" class="text-black-700 hover:text-blue-500">Contact</a>
+        </nav>
+
+        <section id="Home" class="text-center pt-20" style="min-height: calc(100vh - 70px);">
+            <h1 class="text-6xl md:text-7xl font-bold">
+                Hi, I'm <span class="text-blue-700">Dyah</span>
+            </h1>
+            <p class="mt-6 text-2xl md:text-3xl"><span id="hero-text" class="typed-text"></span></p>
+
+            <div class="mt-10">
+                <a href="#About Me"
+                    class="bg-blue-600 hover:bg-blue-800 text-white text-2xl px-8 py-4 rounded-xl shadow-md transition duration-300">
+                    More about Me
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <section id="About Me" class="max-w-5xl mx-auto px-6 py-16">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
+            <div class="flex-shrink-0">
+                <img src="image/myprofil.png" alt="Dyah photo"
+                    class="w-64 h-64 rounded-full object-cover border-4 border-blue-700" />
+            </div>
+
+            <div class="max-w-2xl text-center md:text-left">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center fade-in-section">
+                    Who is <span class="text-blue-700">Dyah?</span>
+                </h2>
+                <p class="text-lg leading-relaxed">
+                    My name is Dyah Ayu Intan Aryanti, everyone call me Dyah or sometimes they call me Intan.
+                    I am a <span class="font-semibold">psychologist</span> based in Salatiga, Central Java, who also
+                    works as a freelance <span class="font-semibold">web developer</span>.
+                    I hold a Master’s degree in Psychology from Gadjah Mada University (UGM),
+                    and I previously studied Software Engineering at SMK Negeri Tengaran.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <h2 id="My Project" class="text-4xl md:text-5xl font-bold mb-6 text-center fade-in-section">
+        My <span class="text-blue-700">Project</span>
+    </h2>
+    <div class="max-w-4xl mx-auto">
+
+        <div class="relative flex items-center justify-center">
+            <button onclick="prevImage()"
+                class="absolute left-0 text-3xl font-bold text-gray-700 hover:text-black">&lt;</button>
+
+            <img id="awardImage" src="image/project1.png" alt="Gambar project"
+                class="w-[360px] shadow-lg rounded transition duration-300" />
+
+            <button onclick="nextImage()"
+                class="absolute right-0 text-3xl font-bold text-gray-700 hover:text-black">&gt;</button>
+        </div>
+    </div>
+
+    <section id="Work Experience" class="max-w-6xl mx-auto px-6 py-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center fade-in-section">
+            My <span class="text-blue-700">Work Experience</span>
+        </h2>
+        <div class="max-w-4xl mx-auto">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="space-y-20">
+                    <div class="text-right md:text-left">
+                        <h3 class="text-lg font-bold text-blue-800">Clinical Psychologist</h3>
+                        <p>RSU Salatiga,<br>January 2020 - present</p>
+                    </div>
+                    <div class="text-right md:text-left">
+                        <h3 class="text-lg font-bold text-blue-800">Web Developer</h3>
+                        <p>Freelance,<br>November 2019 - Present</p>
+                    </div>
+                    <div class="text-right md:text-left">
+                        <h3 class="text-lg font-bold text-blue-800">Research Assistant in Psychology</h3>
+                        <p>Gadjah Mada University (UGM),<br>August 2019 – December 2019</p>
+                    </div>
+                </div>
+
+                <div class="relative flex justify-center">
+                    <div class="w-1 bg-black absolute h-full"></div>
+                    <div class="flex flex-col justify-between space-y-20 relative z-10">
+                        <div class="w-6 h-6 bg-blue-600 rounded-full mx-auto"></div>
+                        <div class="w-6 h-6 bg-blue-600 rounded-full mx-auto"></div>
+                        <div class="w-6 h-6 bg-blue-600 rounded-full mx-auto"></div>
+                    </div>
+                </div>
+
+                <div class="space-y-20">
+                    <div>
+                        <p>Providing counseling and therapy for patients with psychological issues. Developing therapy
+                            programs for individuals and groups.</p>
+                    </div>
+                    <div>
+                        <p>Designing websites for local businesses using HTML, CSS, JavaScript, and WordPress. Ensuring
+                            responsive and user-friendly designs.</p>
+                    </div>
+                    <div>
+                        <p>Assisted in research on clinical and developmental psychology, gathering data through
+                            interviews, surveys, and observations.</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <h2 id="Testimonials" class="text-4xl md:text-5xl font-bold mb-6 text-center fade-in-section">
+        What they say about <br><span class="text-blue-700">my work</span> performance?
+    </h2>
+
+    <section class="bg-white py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <div class="bg-blue-500 text-white p-6 rounded-lg relative pt-16">
+                    <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+                        <img src="image/testimonial1.jpg" alt="Client 1"
+                            class="w-20 h-20 rounded-full border-4 border-white shadow-lg">
+                    </div>
+                    <p class="text-center text-lg mb-4">"Dyah delivered a stunning website that perfectly captured our
+                        brand. Their technical expertise and creative vision were exactly what we needed."</p>
+                    <p class="text-center font-semibold italic">-Justin/Business Client</p>
+                </div>
+
+                <div class="bg-blue-500 text-white p-6 rounded-lg relative pt-16">
+                    <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+                        <img src="image/testimonial2.jpg" alt="Client 2"
+                            class="w-20 h-20 rounded-full border-4 border-white shadow-lg">
+                    </div>
+                    <p class="text-center text-lg mb-4">"Dr. Dyah helped me navigate one of the toughest periods of my
+                        life with compassion and wisdom. Their guidance made a lasting difference in my mental
+                        well-being."</p>
+                    <p class="text-center font-semibold italic">–Selena/Client</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <h2 id="Contact" class="text-4xl md:text-5xl font-bold mb-6 text-center fade-in-section">
+        What Would You Say <br><span class="text-blue-700">About Me?</span>
+    </h2>
+
+    <div class="flex justify-center gap-6 mt-8 relative flex-wrap">
+        <div class="relative">
+            <button id="criticismBtn" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">
+                Criticism and Suggestions
+            </button>
+
+            <div id="criticismForm"
+                class="absolute left-1/2 transform -translate-x-1/2 mt-4 w-96 p-6 bg-white border rounded-lg shadow-lg hidden z-50">
+                <h2 class="text-xl font-semibold mb-4 text-gray-800">Have a Suggestion?</h2>
+                <form>
+                    <label class="block text-left text-sm mb-1 text-gray-700">Name:</label>
+                    <input type="text" class="w-full p-2 border rounded mb-3" placeholder="Enter your Name" />
+
+                    <label class="block text-left text-sm mb-1 text-gray-700">Suggestions and Comments:</label>
+                    <textarea class="w-full p-2 border rounded mb-3" rows="3"
+                        placeholder="Tell Me What You Think..."></textarea>
+
+                    <div class="flex justify-between items-center">
+                        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                            Send
+                        </button>
+                        <button type="button" id="closeCriticismForm" class="text-gray-500 hover:text-red-500 text-sm">
+                            Close
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="relative">
+            <button id="consultationBtn"
+                class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">
+                Consultation
+            </button>
+
+            <div id="consultationForm"
+                class="absolute left-1/2 transform -translate-x-1/2 mt-4 w-96 p-6 bg-white border rounded-lg shadow-lg hidden z-50">
+                <h2 class="text-xl font-semibold mb-4 text-gray-800">Talk to a Psychologist</h2>
+                <form>
+                    <label class="block text-left text-sm mb-1 text-gray-700">Name:</label>
+                    <input type="text" class="w-full p-2 border rounded mb-3" placeholder="Enter your Name" />
+
+                    <label class="block text-left text-sm mb-1 text-gray-700">Email:</label>
+                    <input type="email" class="w-full p-2 border rounded mb-3" placeholder="Enter your Email" />
+
+                    <label class="block text-left text-sm mb-1 text-gray-700">Message:</label>
+                    <textarea class="w-full p-2 border rounded mb-3" rows="3"
+                        placeholder="Please write your concern or question here..."></textarea>
+
+                    <div class="flex justify-between items-center">
+                        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                            Send
+                        </button>
+                        <button type="button" id="closeConsultationForm"
+                            class="text-gray-500 hover:text-red-500 text-sm">
+                            Close
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-10">
+        <div class="flex justify-center items-center gap-6">
+
+            <a href="https://instagram.com/dyxtny" title="Instagram" target="_blank"
+                onclick="showNotification('Menuju Instagram')"
+                class="hover:text-purple-500 transition-transform hover:scale-125 float-anim delay-100">
+                <img src="image/logo1-removebg-preview.png" alt="TikTok"
+                    class="w-14 h-14 hover:scale-110 transition-transform duration-300">
+            </a>
+
+            <a href="https://tiktok.com/@capricornuess" title="tiktok" target="_blank"
+                onclick="showNotification('Menuju tiktok')"
+                class="hover:text-purple-500 transition-transform hover:scale-125 float-anim delay-100">
+                <img src="image/logo2-removebg-preview.png" alt="TikTok"
+                    class="w-14 h-14 hover:scale-110 transition-transform duration-300">
+            </a>
+
+            <a href="https://twitter.com/tawroogirll" title="Instagram" target="_blank"
+                onclick="showNotification('Menuju Instagram')"
+                class="hover:text-purple-500 transition-transform hover:scale-125 float-anim delay-100">
+                <img src="image/logo2.png" alt="X" class="w-14 h-14 hover:scale-110 transition-transform duration-300">
+            </a>
+
+            <a href="https://www.facebook.com/Iniintan" title="Instagram" target="_blank"
+                onclick="showNotification('Menuju Instagram')"
+                class="hover:text-purple-500 transition-transform hover:scale-125 float-anim delay-100">
+                <img src="image/logo4-removebg-preview.png" alt="Facebook"
+                    class="w-14 h-14 hover:scale-110 transition-transform duration-300">
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gradient-to-t from-white to-blue-100 text-gray-700 py-10 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+
+            <div>
+                <h3 class="text-lg font-bold text-blue-800 mb-4">QUICK LINKS</h3>
+                <ul class="space-y-1">
+                    <li><a href="#Home" class="hover:text-blue-600">Home</a></li>
+                    <li><a href="#About Me" class="hover:text-blue-600">About Me</a></li>
+                    <li><a href="#My Project" class="hover:text-blue-600">My Project</a></li>
+                    <li><a href="#Work Experience" class="hover:text-blue-600">Work Experience</a></li>
+                    <li><a href="#Testimonials" class="hover:text-blue-600">Testimonials</a></li>
+                    <li><a href="#Contact" class="hover:text-blue-600">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-bold text-blue-800 mb-4">CONTACT ME</h3>
+                <ul class="space-y-1">
+                    <li><a href="https://instagram.com/dyxtny" title="Instagram" target="_blank"
+                            onclick="showNotification('Menuju Instagram')"
+                            class="hover:text-blue-600 transition-transform hover:scale-125 float-anim delay-100">Instagram</a>
+                    </li>
+                    <li><a href="https://tiktok.com/@capricornuess" title="Tiktok" target="_blank"
+                            onclick="showNotification('Menuju Tiktok')"
+                            class="hover:text-blue-600 transition-transform hover:scale-125 float-anim delay-100">Tiktok</a>
+                    </li>
+                    <li><a href="https://twitter.com/tawroogirll" title="Twitter" target="_blank"
+                            onclick="showNotification('Menuju Twitter')"
+                            class="hover:text-blue-600 transition-transform hover:scale-125 float-anim delay-100">Twitter</a>
+                    </li>
+                    <li><a href="https://facebook.com/Iniintan" title="Facebook" target="_blank"
+                            onclick="showNotification('Menuju Facebook')"
+                            class="hover:text-blue-600 transition-transform hover:scale-125 float-anim delay-100">Facebook</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-blue-800 font-semibold mb-2 uppercase">Subscribe for updates.</h3>
+                <div class="flex flex-col md:flex-row items-center gap-2">
+                    <input type="email" placeholder="Enter your email address ..."
+                        class="px-4 py-2 border rounded-md w-full md:w-auto" />
+                    <button class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition">Join
+                        Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center text-gray-500 mt-8 italic">
+            © 2025 Dyah. All rights reserved.
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
